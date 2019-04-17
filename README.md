@@ -2,11 +2,11 @@
 
 An asynchronous Golint for Vim.
 
-Available linter
+![Realtime style check](./assets/golinter.gif)
+
+## Available linter
 
 - [GolangCI-Lint](https://github.com/golangci/golangci-lint)
-
-![Realtime style check](./assets/vim-golinter.gif)
 
 ## Invoke manually
 
