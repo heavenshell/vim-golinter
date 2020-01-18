@@ -37,10 +37,11 @@ function! golinter#golangci_lint#run(bufnum, args) abort
   let name = bufname(bufnr('%'))
   let file = fnamemodify(name, ':p')
 
-  let cmd = 'golangci-lint run --out-format json '
+  let cmd = 'golangci-lint run %s --out-format json'
   if len(a:args) > 0
     let cmd .= join(a:args, ' ')
   endif
+  let cmd = printf(cmd, file)
 
   let s:qflist = []
   " Golangci_lint does not support STDIN
